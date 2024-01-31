@@ -170,5 +170,60 @@ section.categoria{
 
 .btn-white:hover, .btn-white.active{
     background-color: var(--color-primary);
-    
+
 }
+
+
+.title-categoria{
+    color: var(--color-black);
+    margin-left: 5px;
+}
+
+
+.container-group .card{
+    padding: 15px;
+    cursor: pointer;
+}
+
+
+.container-img-produto{
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-secondary);
+    border-radius: 15px;
+    margin-right: 20px;
+    flex: none;
+}
+
+
+.infos-produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.infos-produtos .name{
+    font-size: 18px;
+    color: var(--color-black);
+    margin-bottom: 0px;
+}
+
+
+.infos-produtos .descricao{
+    font-size: 14px;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+
+.infos-produtos .price{
+    font-size: 16px;
+    color: var(--color-primary);
+    margin-bottom: 0px;
+}
+
+
+
