@@ -291,5 +291,34 @@ section.categoria{
     font-size: 18px;
 }
 
+/*DETALHES DO PRODUTO*/
+
+.bg-top.details{
+    height: 410px;
+}
+
+
+.container-voltar{
+    width: 31px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    font-size: 18px;
+    color: var(--color-black) !important;
+}
+
+
+.container-imagem-produto{
+    height: 240px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
 
 
