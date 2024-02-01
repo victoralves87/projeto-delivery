@@ -108,21 +108,23 @@
             <span class="sub-title-categoria">Informe se for preciso alguma observação abaixo:</span>
             <textarea class="form-control mt-2" rows="5"></textarea>
         </div>
-
     </section>
 
-    <section class="menu-bottom" id="menu-bottom">
-        <a class="menu-bottom-item active">
-            <i class="fas fa-book-open">&nbsp; Cardapio</i>
-        </a>
-         <a class="menu-bottom-item">
-            <i class="fas fa-utensils">&nbsp; Pedido</i>
-        </a>
-         <a class="menu-bottom-item">
-            <span class="badge-total-carrinho">2</span>
-            <!-- <i class="fas fa-shopping-cart"></i> -->
-            &nbsp; Carrinho
-        </a>
+    <section class="menu-bottom details" id="menu-bottom">
+         <div class="add-carrinho">
+            <span class="btn-menos">
+                <i class="fas fa-minus"></i>
+            </span>
+            <span class="add-numero-itens">
+                2
+            </span>
+            <span class="btn-mais">
+                <i class="fas fa-plus"></i>
+            </span>
+         </div>
+         <a class="btn btn-yellow btn-sm">
+            Adicionar <span>R$49,00</span>
+         </a>
     </section>
 
     <section class="menu-bottom disabled hidden" id="menu-bottom-closed">
@@ -132,7 +134,7 @@
 
 
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/cardapio.js"></script>
+    <script src="./js/item.js"></script>
     
 </body>
 </html>
