@@ -141,3 +141,32 @@ h1.title-page{
     margin-left: 270px;
     margin-right: 16px;
 }
+
+.conteudo-inner{
+    margin-top: 50px;
+}
+
+/*MENU PEDIDO*/
+
+.menus-pedido i{
+    margin-right: 5px;
+}
+
+.menus-pedido a{
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.menus-pedido a.active, .menus-pedido a:hover{
+    opacity: 1;
+}
+
+.badge-total-pedidos{
+    display: inline-block;
+    background-color: var(--color-primary-out);
+    border-radius: 50px;
+    font-size: 14px;
+    width: 25px;
+    text-align: center;
+    margin-left: 5px;
+}
