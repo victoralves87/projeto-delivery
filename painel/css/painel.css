@@ -316,3 +316,32 @@ h1.title-page{
     font-size: 14px;
     color: var(--color-text);
 }
+
+.container-itens-pedido{
+    padding: 20px;
+    background-color: var(--color-white);
+}
+
+.container-itens-pedido .card-item{
+    padding: 5px 0px 10px 0px;
+    border-bottom: 1px dashed #cdcdcd;
+}
+
+.container-itens-pedido .card-item:last-child {
+    border: none;
+}
+
+.container-itens-pedido::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    margin-top: 17px;
+    background: radial-gradient(circle, transparent, transparent 50%, #ffffff 50%, #ffffff 100%) -15px 2px / 16px 16px repeat-x;
+}
+
+.footer-btn{
+    display: flex;
+    justify-content: end;
+}
