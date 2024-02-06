@@ -1,6 +1,6 @@
-/*LOGIN*/
+/* Login */
 
-.login{
+.login {
     width: calc(100% - 20px);
     max-width: 450px;
     margin: 0 auto;
@@ -10,13 +10,13 @@
     align-items: center;
 }
 
-.card-login{
+.card-login {
     flex: 1;
     padding: 45px;
     background-color: var(--color-secondary);
 }
 
-.icon-form{
+.icon-form {
     position: absolute;
     margin-left: 15px;
     margin-top: 11px;
@@ -24,23 +24,23 @@
     font-size: 18px;
 }
 
-.card-login img{
+.card-login img {
     margin: 0 auto;
     margin-bottom: 30px;
 }
 
-.card-login input{
+.card-login input {
     padding-left: 45px;
 }
 
-.btn-login{
+.btn-login {
     padding: 11px;
     font-size: 18px;
 }
 
-/*MENU ESQUERDA*/
+/* Menu Left */
 
-.menu-left{
+.menu-left {
     width: 250px;
     background-color: var(--color-secondary);
     position: fixed;
@@ -52,36 +52,36 @@
     padding-left: 25px;
 }
 
-.menu-left .menus{
+.menu-left .menus {
     margin-top: 55px;
 }
 
-.menu-left .logo{
+.menu-left .logo {
     text-align: center;
     margin-left: -25px;
     margin-top: 30px;
 }
 
-.menu-item{
+.menu-item {
     display: block;
     padding: 15px 30px;
     color: var(--color-black) !important;
     text-decoration: none !important;
 }
 
-.menu-item i{
+.menu-item i {
     width: 18px;
     text-align: center;
     margin-right: 8px;
 }
 
-.menu-item.active{
+.menu-item.active {
     background-color: var(--color-background);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-.menu-item.active::before{
+.menu-item.active::before {
     content: "";
     height: 50px;
     width: 25px;
@@ -94,7 +94,7 @@
     rotate: 180deg;
 }
 
-.menu-item.active::after{
+.menu-item.active::after {
     content: "";
     height: 50px;
     width: 25px;
@@ -106,20 +106,20 @@
     margin-top: 40px;
 }
 
-/*MENU SUPERIOR*/
+/* Menu Topo */
 
-h1.title-page{
+h1.title-page {
     color: var(--color-black);
     font-size: 20px;
     flex: 1;
 }
 
-.container-right{
+.container-right {
     display: flex;
     align-items: center;
 }
 
-.container-dados p{
+.container-dados p {
     margin-bottom: 0;
     font-size: 16px;
     text-align: right;
@@ -127,7 +127,7 @@ h1.title-page{
     line-height: 15px;
 }
 
-.container-dados span{
+.container-dados span {
     font-size: 13px;
     text-align: right;
     color: var(--color-text-out);
@@ -137,17 +137,16 @@ h1.title-page{
     margin-right: 30px;
 }
 
-.conteudo{
-    margin-left: 270px;
-    margin-right: 16px;
+.conteudo {
+    padding-left: 270px;
+    padding-right: 15px;
 }
 
-.conteudo-inner{
+.conteudo-inner {
     margin-top: 50px;
 }
 
-
-/*MENU PEDIDO*/
+/* Tela Pedidos */
 
 .menus-pedido i {
     margin-right: 5px;
@@ -259,15 +258,14 @@ h1.title-page{
     height: 140px;
 }
 
+/* Modal detalhes */
 
-/*MODAL DETALHES*/
-
-.modal-content{
-    background-color: transparent;
+.modal-content {
+    background: transparent;
     border: none;
 }
 
-.modal-header{
+.modal-header {
     border-bottom: 0;
     background-color: var(--color-background);
     border-radius: 0px;
@@ -283,46 +281,46 @@ h1.title-page{
     background: radial-gradient(circle, transparent, transparent 50%, var(--color-background) 50%, var(--color-background) 100%) -7px -8px / 16px 16px repeat-x;
 }
 
-.modal-title{
+.modal-title {
     font-size: 18px;
     color: var(--color-black);
 }
 
-.modal-title .horario-pedido{
+.modal-title .horario-pedido {
     font-size: 14px;
     color: var(--color-text);
     padding-left: 15px;
 }
 
-.modal-body{
+.modal-body {
     padding: 0;
 }
 
-.container-dados-pedido{
+.container-dados-pedido {
     padding: 20px;
     padding-bottom: 25px;
     background-color: var(--color-background);
 }
 
-.container-dados-pedido .d-flex{
+.container-dados-pedido .d-flex {
     justify-content: space-between;
 }
 
-.cursor-default{
+.cursor-default {
     cursor: default;
 }
 
-.container-dados-pedido .info-pedido{
+.container-dados-pedido .info-pedido {
     font-size: 14px;
     color: var(--color-text);
 }
 
-.container-itens-pedido{
+.container-itens-pedido {
     padding: 20px;
     background-color: var(--color-white);
 }
 
-.container-itens-pedido .card-item{
+.container-itens-pedido .card-item {
     padding: 5px 0px 10px 0px;
     border-bottom: 1px dashed #cdcdcd;
 }
@@ -341,7 +339,103 @@ h1.title-page{
     background: radial-gradient(circle, transparent, transparent 50%, #ffffff 50%, #ffffff 100%) -15px 2px / 16px 16px repeat-x;
 }
 
-.footer-btn{
+.footer-btn {
     display: flex;
     justify-content: end;
 }
+
+/* Cardápio */
+
+.card-drag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.drag-icon {
+    display: flex;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 35px;
+    cursor: grab;
+}
+
+.card-drag .infos {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+}
+
+.card-drag .infos .name {
+    color: var(--color-black)!important;
+    text-decoration: none!important;
+}
+
+.actions {
+    display: flex;
+}
+
+.icon-action {
+    margin-left: 10px;
+    font-size: 16px;
+    color: var(--color-black)!important;
+    text-decoration: none!important;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: var(--box-shadow);
+}
+
+.icon-action:hover {
+    background-color: var(--color-secondary);
+}
+
+.title-produtos {
+    font-size: 14px;
+    color: var(--color-black);
+}
+
+.drag-icon-produto {
+    display: flex;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: grab;
+}
+
+.lista-produtos .container-img-produto {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.lista-produtos .infos-produto {
+    flex: 1;
+}
+
+.badge-adicionais {
+    position: absolute;
+    top: 6px;
+    margin-left: 19px;
+    font-size: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
