@@ -568,6 +568,10 @@ textarea {
     color: var(--color-primary);
 }
 
+.color-green{
+    color: var(--color-green) !important;
+}
+
 .card-address{
     cursor: pointer;
     display: flex;
