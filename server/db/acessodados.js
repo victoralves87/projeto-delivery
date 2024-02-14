@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+const mysql = require('mysql2/promise');
 
 module.exports = class AcessoDados {
 
@@ -8,7 +8,9 @@ module.exports = class AcessoDados {
             
             var SqlQueryUp = SqlQuery;
             var retorno;
-            var connection = mysql.createConnection(global.config.database);
+
+            // Note que 'createConnection' foi substituído por 'createPool'
+            var pool = mysql.createPool(global.config.database);
 
             // percorre os parametros
             if (parametros && parametros != undefined) {
@@ -22,7 +24,8 @@ module.exports = class AcessoDados {
                         let campo = key;
                         let valor = p[key];
 
-                        SqlQueryUp = SqlQueryUp.replace('@' + campo, `'${valor}'`);
+                        // Usamos placeholders em vez de concatenar strings
+                        SqlQueryUp = SqlQueryUp.replace('@' + campo, '?');
 
                     }
 
@@ -30,22 +33,12 @@ module.exports = class AcessoDados {
 
             }
 
-            connection.connect();
+            // Utilize a função 'execute' para evitar SQL injection
+            const [rows, fields] = await pool.execute(SqlQueryUp, Object.values(parametros));
 
-            await new Promise((resolve, reject) => {
+            // O resultado agora está em 'rows'
+            retorno = rows;
 
-                connection.query(SqlQueryUp, function (error, results, fields) {
-                    if (error) {
-                        reject();
-                        throw error;
-                    }
-                    retorno = results;
-                    resolve();
-                });
-
-            });
-
-            connection.end();
             return retorno;
 
         } catch (error) {

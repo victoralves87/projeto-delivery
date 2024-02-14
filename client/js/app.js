@@ -100,22 +100,32 @@ app.method = {
     },
 
     //metodo de mensagem genérica
-    mensagem: (texto, cor = 'red', tempo = 3500) =>{
-        
-        let container =document.querySelector('container-mensagens');
-
-        if(container.childElementCount > 2){
+    mensagem: (texto, cor = 'red', tempo = 3500) => {
+        let container = document.querySelector('.container-mensagens');
+    
+        if (!container) {
+            console.error('Container de mensagens não encontrado.');
             return;
         }
-
+    
+        if (container.childElementCount > 2) {
+            return;
+        }
+    
         let id = Math.floor(Date.now() * Math.random()).toString();
-        let msg = `<div> id="msg-${id}" class="toast ${cor}"> ${texto}</div>`;
-
-        container.innerHTML += msg;
-
-        setTimeout(() =>{
-            document.querySelector(`#msg-${id}`).remove();
-        }, tempo)
-
+        let msg = document.createElement('div');
+        msg.id = `msg-${id}`;
+        msg.className = `toast ${cor}`;
+        msg.textContent = texto;
+    
+        container.appendChild(msg);
+    
+        setTimeout(() => {
+            let mensagemElement = document.querySelector(`#msg-${id}`);
+            if (mensagemElement) {
+                mensagemElement.remove();
+            }
+        }, tempo);
     }
+    
 }
