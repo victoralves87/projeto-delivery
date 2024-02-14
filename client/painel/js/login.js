@@ -24,12 +24,12 @@ login.method ={
         let senha = document.querySelector("#txtSenhaLogin").value.trim();
 
         if(email.length == 0){
-            alert("informe o e-mail por favor!");
+           app.method.mensagem("informe o e-mail por favor!");
             document.querySelector("#txtEmailLogin").focus();
             return;
         }
         if(senha.length == 0){
-            alert("informe a Senha por favor!");
+            app.method.mensagem("informe a Senha por favor!");
             document.querySelector("#txtSenhaLogin").focus();
             return;
         }
@@ -47,8 +47,13 @@ login.method ={
 
         app.method.post('/login', JSON.stringify(dados), 
             (response) =>{
-                console.log(response);
+
+               if(response.status == 'error'){
+                app.method.mensagem(response.message);
+                return;
+               }
             },
+
             (error) =>{
                 console.log(error);
             }, true
